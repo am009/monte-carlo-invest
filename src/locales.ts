@@ -9,14 +9,14 @@ export const translations = {
       confirmBig: "This will run {count} different parameter combinations. It might freeze your browser. Continue?"
     },
     strategy: {
-      title: "1. Market Estimation Strategy",
+      title: "1. Market Model and Strategy Params",
       paramsTitle: "Strategy Parameters",
-      paramsDesc: "Define variables to control your strategy (e.g., leverage, threshold).",
-      addPlaceholder: "e.g. leverage",
+      paramsDesc: "Define variables to control your strategy (e.g., invest percentage).",
+      addPlaceholder: "e.g. percent",
       noParams: "No parameters defined yet.",
-      logicTitle: "JavaScript Logic",
-      logicDesc: "Returns multiplier (e.g. 1.05 = +5%, 0.9 = -10%)",
-      codePlaceholder: "// Write your strategy logic here...\n// Example:\nconst outcome = Math.random();\nif (outcome > 0.5) return 1 + leverage;\nelse return 1 - leverage;",
+      logicTitle: "JavaScript Market Model Func",
+      logicDesc: "Returns invest result multiplier (e.g. 1.05 = +5%, 0.9 = -10%)",
+      codePlaceholder: "// Write your strategy logic here... Use Math.random() to simulate market situations, and use param to calc invest result multiplier.\n// Example:\nconst outcome = Math.random();\nif (outcome > 0.5) return 1 + leverage;\nelse return 1 - leverage;",
       nextBtn: "Next: Configure Parameters"
     },
     config: {
@@ -58,14 +58,14 @@ export const translations = {
       confirmBig: "这将运行 {count} 种不同的参数组合，可能会导致浏览器卡顿。是否继续？"
     },
     strategy: {
-      title: "1. 市场预估策略",
+      title: "1. 市场模型和策略参数",
       paramsTitle: "策略参数",
-      paramsDesc: "定义控制策略的变量（例如：杠杆率、阈值）。",
-      addPlaceholder: "例如：leverage",
+      paramsDesc: "定义控制策略的变量（例如：投入比例）。",
+      addPlaceholder: "例如：percent",
       noParams: "暂未定义参数。",
-      logicTitle: "JavaScript 逻辑",
-      logicDesc: "返回倍数（例如 1.05 = +5%, 0.9 = -10%）",
-      codePlaceholder: "// 在此编写策略逻辑...\n// 示例：\nconst outcome = Math.random();\nif (outcome > 0.5) return 1 + leverage;\nelse return 1 - leverage;",
+      logicTitle: "JavaScript 市场模型函数",
+      logicDesc: "返回投资结果倍数（例如 1.05 = +5%, 0.9 = -10%）",
+      codePlaceholder: "// 在此编写策略逻辑... 使用Math.random()模拟市场的不同可能情景，并返回对应的投资倍率（初始资金为1）\n// 示例：\nconst outcome = Math.random();\nif (outcome > 0.5) return 1 + leverage;\nelse return 1 - leverage;",
       nextBtn: "下一步：配置参数"
     },
     config: {

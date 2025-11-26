@@ -38,6 +38,21 @@ const ParamConfig: React.FC<ParamConfigProps> = ({
         <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-4">{texts.simSettings}</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+            <label className="block text-sm font-medium text-slate-700 mb-1 flex items-center gap-1">
+              <Cpu className="w-4 h-4 text-slate-500" />
+              {texts.threads}
+            </label>
+            <p className="text-xs text-slate-400 mb-3">{texts.threadsDesc}</p>
+            <input
+              type="number"
+              min="1"
+              max="32"
+              value={simConfig.numThreads}
+              onChange={(e) => onSimConfigChange('numThreads', Math.max(1, parseInt(e.target.value) || 1))}
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            />
+          </div>
+          <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
             <label className="block text-sm font-medium text-slate-700 mb-1">{texts.expPerParam}</label>
             <p className="text-xs text-slate-400 mb-3">{texts.expPerParamDesc}</p>
             <input
@@ -54,21 +69,6 @@ const ParamConfig: React.FC<ParamConfigProps> = ({
               type="number"
               value={simConfig.numRounds}
               onChange={(e) => onSimConfigChange('numRounds', parseInt(e.target.value) || 0)}
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-            />
-          </div>
-          <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
-            <label className="block text-sm font-medium text-slate-700 mb-1 flex items-center gap-1">
-              <Cpu className="w-4 h-4 text-slate-500" />
-              {texts.threads}
-            </label>
-            <p className="text-xs text-slate-400 mb-3">{texts.threadsDesc}</p>
-            <input
-              type="number"
-              min="1"
-              max="32"
-              value={simConfig.numThreads}
-              onChange={(e) => onSimConfigChange('numThreads', Math.max(1, parseInt(e.target.value) || 1))}
               className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
             />
           </div>

@@ -11,12 +11,14 @@ const DEFAULT_CODE = `// Strategy: Kelly Criterion Coin Flip
 // 50% chance to win 80%, 50% to lose 50%.
 // two individual bets
 
+// if bet2 is not specified, then it is zero. Try delete the bet2 param.
 const bet2d = (typeof bet2 === 'undefined') ? 0.0 : bet2;
 const winProbability = 0.5; 
 const isWin1 = Math.random() < winProbability;
 const isWin2 = Math.random() < winProbability;
 const mul1 = isWin1 ? 0.8 : -0.5;
 const mul2 = isWin2 ? 0.8 : -0.5;
+// calc final return
 return 1 + (mul1 * bet) + (mul2 * bet2d)`;
 
 const App: React.FC = () => {
