@@ -55,15 +55,15 @@ const SurfaceChart3D: React.FC<SurfaceChart3DProps> = ({ results, xParam, yParam
     }];
 
     const layout = {
-      title: texts.surfaceTitle,
+      title: { text: texts.surfaceTitle },
       autosize: true,
       margin: { l: 0, r: 0, b: 0, t: 30 },
       scene: {
-        xaxis: { title: xParam.name },
-        yaxis: { title: yParam.name },
-        zaxis: { title: texts.growthAxis },
+        xaxis: { title: { text: xParam.name } },
+        yaxis: { title: { text: yParam.name } },
+        zaxis: { title: { text: texts.growthAxis } },
         camera: {
-            eye: {x: 1.5, y: 1.5, z: 1.5}
+          eye: { x: 1.5, y: 1.5, z: 1.5 }
         }
       },
       paper_bgcolor: 'rgba(0,0,0,0)',
